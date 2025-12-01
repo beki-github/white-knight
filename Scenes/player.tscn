@@ -42,7 +42,6 @@ animations = [{
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
@@ -52,5 +51,6 @@ autoplay = "idle"
 frame_progress = 0.312598
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_3smsa")
+one_way_collision_margin = 0.0
