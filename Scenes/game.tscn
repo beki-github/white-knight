@@ -169,6 +169,7 @@ texture = ExtResource("3_wrm1d")
 
 [sub_resource type="TileSet" id="TileSet_wowpa"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_3dryh")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v158k"]
@@ -340,7 +341,7 @@ layer_1/tile_data = PackedInt32Array(196618, 65536, 0, 131082, 65536, 0, 196617,
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 z_index = 5
 position = Vector2(311, -177)
-collision_layer = 3
+collision_layer = 2
 collision_mask = 3
 script = ExtResource("2_qxrlw")
 
