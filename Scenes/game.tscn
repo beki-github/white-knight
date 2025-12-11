@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://sm3m22iy1ri8"]
+[gd_scene load_steps=25 format=3 uid="uid://sm3m22iy1ri8"]
 
 [ext_resource type="PackedScene" uid="uid://cfgnpbpxdcg3o" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://b4uddvy0d6lqm" path="res://scripts/gamemanager.gd" id="1_h4fw4"]
 [ext_resource type="Script" uid="uid://m8iujq0va6rl" path="res://scripts/player.gd" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://dot46ua118fgt" path="res://assets/sprites/world_tileset.png" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dg4jkbae2xiki" path="res://Scenes/platform.tscn" id="4_3dryh"]
@@ -328,6 +329,18 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+
+[node name="Gamemanager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_h4fw4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Gamemanager"]
+
+[node name="Label" type="Label" parent="Gamemanager/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0.207017, 0.0663984, 0.0279586, 1)
+theme_override_colors/font_outline_color = Color(0.320177, 0.171263, 0.072111, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-19, 44)
